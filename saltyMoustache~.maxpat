@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 0.0, -26.0, 640.0, 506.0 ],
+		"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,119 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 450.0, 330.0, 50.0, 22.0 ],
+					"text" : "13"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "box",
+						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial Bold Italic",
+									"fontsize" : 12.0,
+									"id" : "obj-25",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 277.430328369140625, 103.5, 297.32159423828125, 20.0 ],
+									"text" : "MC Polyphonic FM wavetable synthesis"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial Italic",
+									"fontsize" : 12.0,
+									"id" : "obj-1",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 50.0, 124.0, 541.0, 60.0 ],
+									"text" : "This patch takes a wavetable file and extracts the waveforms to buffers on a polybuffer~. Waveforms are randomly assigned to different channels of mc.wave~ for playback. FM synthesis by using 2 sets of mc.wave~, one as a modulator and one as a carrier. A metro drives a random note sequence, which is allocated into seperate channels."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial Bold Italic",
+									"fontsize" : 18.0,
+									"id" : "obj-15",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 50.0, 100.0, 225.430328369140625, 27.0 ],
+									"text" : "db.mc.wavetable_fmpoly",
+									"textcolor" : [ 0.301961004734039, 0.337255001068115, 0.403921991586685, 1.0 ]
+								}
+
+							}
+ ],
+						"lines" : [  ]
+					}
+,
+					"patching_rect" : [ 5.569672107696533, 7.0, 48.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p credit"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -52,7 +165,7 @@
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "multichannelsignal", "multichannelsignal" ],
-					"patching_rect" : [ 30.284835815429688, 314.0, 759.0, 108.0 ],
+					"patching_rect" : [ 30.284835815429688, 403.0, 759.0, 108.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -366,18 +479,18 @@
 					"patching_rect" : [ 1164.0, 107.66668701171875, 56.0, 22.0 ],
 					"restore" : 					{
 						"live.gain~" : [ 0.0 ],
-						"number" : [ 2.0 ],
-						"number[1]" : [ 30 ],
-						"number[2]" : [ 300 ],
-						"number[3]" : [ 0.0 ],
-						"number[4]" : [ 100.0 ],
-						"number[5]" : [ 2 ],
+						"number" : [ 5.0 ],
+						"number[1]" : [ 180 ],
+						"number[2]" : [ 100 ],
+						"number[3]" : [ 0.18 ],
+						"number[4]" : [ 110.0 ],
+						"number[5]" : [ 1 ],
 						"textbutton" : [ -1 ],
 						"toggle" : [ 1 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u008001097"
+					"varname" : "u420009087"
 				}
 
 			}
@@ -498,8 +611,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 356.9515380859375, 247.16668701171875, 117.0, 22.0 ],
-					"text" : "expr random(10\\, 40)"
+					"patching_rect" : [ 356.9515380859375, 247.16668701171875, 111.0, 22.0 ],
+					"text" : "expr random(1\\, 40)"
 				}
 
 			}
@@ -1858,47 +1971,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial Bold Italic",
-					"fontsize" : 12.0,
-					"id" : "obj-25",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 233.0, 10.5, 297.32159423828125, 20.0 ],
-					"text" : "MC Polyphonic FM wavetable synthesis"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial Italic",
-					"fontsize" : 12.0,
-					"id" : "obj-1",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 5.569671630859375, 31.0, 541.0, 60.0 ],
-					"text" : "This patch takes a wavetable file and extracts the waveforms to buffers on a polybuffer~. Waveforms are randomly assigned to different channels of mc.wave~ for playback. FM synthesis by using 2 sets of mc.wave~, one as a modulator and one as a carrier. A metro drives a random note sequence, which is allocated into seperate channels."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial Bold Italic",
-					"fontsize" : 18.0,
-					"id" : "obj-15",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 5.569671630859375, 7.0, 225.430328369140625, 27.0 ],
-					"text" : "db.mc.wavetable_fmpoly",
-					"textcolor" : [ 0.301961004734039, 0.337255001068115, 0.403921991586685, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Ableton Sans Medium Regular",
 					"fontsize" : 9.5,
 					"id" : "obj-36",
@@ -2138,7 +2210,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 356.9515380859375, 218.16668701171875, 63.0, 22.0 ],
+					"patching_rect" : [ 356.9515380859375, 198.0, 63.0, 22.0 ],
 					"text" : "metro 100"
 				}
 
@@ -2442,14 +2514,23 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-78", 1 ],
+					"order" : 1,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 1 ],
+					"order" : 0,
 					"source" : [ "obj-8", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
-			"obj-52::obj-20" : [ "Time", "Time", 0 ],
 			"obj-52::obj-12" : [ "Mute", "Mute", 0 ],
+			"obj-52::obj-20" : [ "Time", "Time", 0 ],
 			"obj-47" : [ "number[8]", "number", 0 ],
 			"obj-46" : [ "number[9]", "number[3]", 0 ],
 			"obj-73" : [ "number[10]", "number[1]", 0 ],
@@ -2457,8 +2538,8 @@
 			"obj-19::obj-1" : [ "Bypass[1]", "Bypass", 0 ],
 			"obj-77" : [ "number[7]", "number[4]", 0 ],
 			"obj-49" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-20" : [ "number[11]", "number[1]", 0 ],
 			"obj-54::obj-7" : [ "Q[1]", "Filter Q", 0 ],
+			"obj-20" : [ "number[11]", "number[1]", 0 ],
 			"obj-54::obj-20" : [ "Noise[1]", "Noise Thresh", 0 ],
 			"obj-19::obj-29" : [ "Range[1]", "Range", 0 ],
 			"obj-13" : [ "number[13]", "number[1]", 0 ],
@@ -2531,10 +2612,17 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "db.mc.oneshotramp~.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MC Movement Studies/patchers/shared",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/MC Movement Studies/patchers/shared",
+				"name" : "multiRamp~.maxpat",
+				"bootpath" : "~/gitShow4",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "euclid.js",
+				"bootpath" : "~/gitShow4",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],

@@ -5,7 +5,6 @@
 			"1" : 			{
 				"id" : 1,
 				"data" : 				{
-					"gain~" : [ 97 ],
 					"number" : [ 100.0 ],
 					"number[1]" : [ 180 ],
 					"number[2]" : [ 500 ],
@@ -13,7 +12,13 @@
 					"number[4]" : [ 100.0 ],
 					"number[5]" : [ 2 ],
 					"textbutton" : [ -1 ],
-					"toggle" : [ 1 ]
+					"toggle" : [ 1 ],
+					"live.gain~" : [  ],
+					"bp.Signal Delay::Time" : [  ],
+					"bp.Signal Delay::bypass" : [  ],
+					"bp.Classic Vocoder::Bypass" : [  ],
+					"bp.Classic Vocoder::Noise" : [  ],
+					"bp.Classic Vocoder::Q" : [  ]
 				}
 
 			}
@@ -21,15 +26,41 @@
 			"2" : 			{
 				"id" : 2,
 				"data" : 				{
-					"gain~" : [ 97 ],
+					"number" : [ 5.0 ],
+					"number[1]" : [ 180 ],
+					"number[2]" : [ 100 ],
+					"number[3]" : [ 0.18 ],
+					"number[4]" : [ 110.0 ],
+					"number[5]" : [ 1 ],
+					"textbutton" : [ -1 ],
+					"toggle" : [ 1 ],
+					"live.gain~" : [ 0.0 ],
+					"bp.Signal Delay::Time" : [  ],
+					"bp.Signal Delay::bypass" : [  ],
+					"bp.Classic Vocoder::Bypass" : [  ],
+					"bp.Classic Vocoder::Noise" : [  ],
+					"bp.Classic Vocoder::Q" : [  ]
+				}
+
+			}
+,
+			"3" : 			{
+				"id" : 3,
+				"data" : 				{
 					"number" : [ 100.0 ],
 					"number[1]" : [ 180 ],
-					"number[2]" : [ 523 ],
-					"number[3]" : [ 0.25 ],
+					"number[2]" : [ 300 ],
+					"number[3]" : [ 0.0 ],
 					"number[4]" : [ 100.0 ],
 					"number[5]" : [ 2 ],
 					"textbutton" : [ -1 ],
-					"toggle" : [ 1 ]
+					"toggle" : [ 1 ],
+					"live.gain~" : [ 0.0 ],
+					"bp.Signal Delay::Time" : [ 500.000000000000341 ],
+					"bp.Signal Delay::bypass" : [ 0.0 ],
+					"bp.Classic Vocoder::Bypass" : [ 0.0 ],
+					"bp.Classic Vocoder::Noise" : [ 0.07874 ],
+					"bp.Classic Vocoder::Q" : [ 26.692913000000001 ]
 				}
 
 			}

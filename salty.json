@@ -1,0 +1,41 @@
+{
+	"pattrstorage" : 	{
+		"name" : "salty",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"gain~" : [ 97 ],
+					"number" : [ 100.0 ],
+					"number[1]" : [ 180 ],
+					"number[2]" : [ 500 ],
+					"number[3]" : [ 0.25 ],
+					"number[4]" : [ 100.0 ],
+					"number[5]" : [ 2 ],
+					"textbutton" : [ -1 ],
+					"toggle" : [ 1 ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"gain~" : [ 97 ],
+					"number" : [ 100.0 ],
+					"number[1]" : [ 180 ],
+					"number[2]" : [ 523 ],
+					"number[3]" : [ 0.25 ],
+					"number[4]" : [ 100.0 ],
+					"number[5]" : [ 2 ],
+					"textbutton" : [ -1 ],
+					"toggle" : [ 1 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

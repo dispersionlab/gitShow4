@@ -21,6 +21,6 @@ function euclid(steps,  pulses){
           // storedRhythm.push(0); //'0' indicates no pulse on this beat
       }
   }
-  post(storedRhythm)
+
 outlet(0,storedRhythm)
 }

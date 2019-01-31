@@ -56,7 +56,9 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
 				}
 
 			}
@@ -115,7 +117,9 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
 				}
 
 			}
@@ -174,7 +178,9 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
 				}
 
 			}
@@ -233,7 +239,9 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
 				}
 
 			}
@@ -292,7 +300,9 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
 				}
 
 			}
@@ -351,7 +361,9 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
 				}
 
 			}
@@ -410,7 +422,9 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
 				}
 
 			}
@@ -469,7 +483,9 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
 				}
 
 			}
@@ -528,7 +544,9 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
 				}
 
 			}
@@ -587,7 +605,9 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
 				}
 
 			}
@@ -646,7 +666,70 @@
 					"bp.Compressor::Release" : [  ],
 					"bp.Compressor::Threshold" : [  ],
 					"bp.Compressor::slider[2]" : [  ],
-					"bp.Compressor::slider[3]" : [  ]
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [  ],
+					"sampleWaveform" : [  ]
+				}
+
+			}
+,
+			"12" : 			{
+				"id" : 12,
+				"data" : 				{
+					"live.gain~" : [  ],
+					"number[2]" : [ 20 ],
+					"number[3]" : [ 0.387096762657166 ],
+					"number[4]" : [ 7.610586166381836 ],
+					"number[6]" : [ 64.516128540039062 ],
+					"number[7]" : [ 0.0 ],
+					"number[8]" : [ 675 ],
+					"toggle[1]" : [  ],
+					"decay" : [ 117, 58, 790, 0, 631, 117, 517, 675, 117, 117, 117, 117, 869, 467, 100, 93 ],
+					"attack" : [ 10, 10, 10, 918, 645, 10, 398, 10, 35, 689, 927, 35, 10, 398, 10, 10 ],
+					"modRatio" : [ 0.338709682226181, 0.338709682226181, 0.389482915401459, 0.0, 1.870551109313965, 0.387096762657166, 0.387096762657166, 0.387096762657166, 0.483870953321457, 0.483870953321457, 0.483870953321457, 1.976341724395752, 0.725806474685669, 1.368045926094055, 0.483870953321457, 2.002789497375488 ],
+					"freqDeviation" : [ 48.387096405029297, 136.284591674804688, 39.309883117675781, 64.516128540039062, 9.335881233215332, 64.516128540039062, 80.645164489746094, 64.516128540039062, 64.516128540039062, 80.645164489746094, 80.645164489746094, 80.645164489746094, 80.645164489746094, 80.645164489746094, 80.645164489746094, 48.387096405029297 ],
+					"modFreq" : [ 16.426467895507812, 51.689998626708984, 15.627529144287109, 25.242351531982422, 0.0, 34.058231353759766, 16.426467895507812, 7.610586166381836, 0.0, 91.444114685058594, 0.0, 0.0, 0.0, 107.312705993652344, 0.0, 176.076583862304688 ],
+					"metro" : [ 180 ],
+					"euclidSteps" : [  ],
+					"carrierFreq" : [  ],
+					"pan" : [  ],
+					"euclidMaxSteps" : [ 8 ],
+					"stealing" : [ 0 ],
+					"bp.Waveshaper::Amount[1]" : [  ],
+					"bp.Waveshaper::Gain" : [  ],
+					"bp.Waveshaper::bypass[1]" : [  ],
+					"bp.Waveshaper[1]::Amount[1]" : [  ],
+					"bp.Waveshaper[1]::Gain" : [  ],
+					"bp.Waveshaper[1]::bypass[1]" : [  ],
+					"bp.CV LFO::Amt" : [  ],
+					"bp.CV LFO::FreqRate" : [  ],
+					"bp.CV LFO::Mute" : [  ],
+					"bp.CV LFO::Phase-Inversion" : [  ],
+					"bp.CV LFO::SpectraLFOPhase[1]" : [  ],
+					"bp.CV LFO::SpectraShape" : [  ],
+					"bp.CV LFO::SyncRate" : [  ],
+					"bp.CV LFO::TimeMode" : [  ],
+					"bp.CV LFO::re-trigger" : [  ],
+					"bp.CV LFO[1]::Amt" : [  ],
+					"bp.CV LFO[1]::FreqRate" : [  ],
+					"bp.CV LFO[1]::Mute" : [  ],
+					"bp.CV LFO[1]::Phase-Inversion" : [  ],
+					"bp.CV LFO[1]::SpectraLFOPhase[1]" : [  ],
+					"bp.CV LFO[1]::SpectraShape" : [  ],
+					"bp.CV LFO[1]::SyncRate" : [  ],
+					"bp.CV LFO[1]::TimeMode" : [  ],
+					"bp.CV LFO[1]::re-trigger" : [  ],
+					"bp.Compressor::Attack" : [  ],
+					"bp.Compressor::Bypass" : [  ],
+					"bp.Compressor::Input" : [  ],
+					"bp.Compressor::Output" : [  ],
+					"bp.Compressor::Ratio" : [  ],
+					"bp.Compressor::Release" : [  ],
+					"bp.Compressor::Threshold" : [  ],
+					"bp.Compressor::slider[2]" : [  ],
+					"bp.Compressor::slider[3]" : [  ],
+					"multiRamp~::euclidMaxSteps" : [ 16 ],
+					"sampleWaveform" : [  ]
 				}
 
 			}

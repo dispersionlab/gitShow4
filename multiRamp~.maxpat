@@ -53,7 +53,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-15",
-					"index" : 5,
+					"index" : 4,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -68,7 +68,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 832.0, 5.0, 151.0, 47.0 ],
+					"patching_rect" : [ 832.0, 5.0, 155.0, 47.0 ],
 					"text" : "need to make sure that the max steps is loaded at startup"
 				}
 
@@ -136,7 +136,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 95.0, 134.5, 50.0, 22.0 ],
-					"text" : "2"
+					"text" : "5"
 				}
 
 			}
@@ -252,7 +252,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-10",
-					"index" : 4,
+					"index" : 3,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -511,7 +511,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 59.930328369140625, 717.0, 66.0, 18.0 ],
+					"patching_rect" : [ 618.9302978515625, 697.0, 66.0, 18.0 ],
 					"text" : "MC Ramp",
 					"textcolor" : [ 0.129411771893501, 0.129411771893501, 0.129411771893501, 1.0 ],
 					"textjustification" : 1
@@ -568,7 +568,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 122.59698486328125, 632.931640625, 71.0, 33.0 ],
+					"patching_rect" : [ 630.59698486328125, 663.931640625, 71.0, 33.0 ],
 					"text" : "< One shot envelope"
 				}
 
@@ -580,7 +580,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 65.430328369140625, 462.431640625, 55.0, 33.0 ],
+					"patching_rect" : [ 740.4302978515625, 448.431640625, 55.0, 33.0 ],
 					"text" : "< Busy map"
 				}
 
@@ -616,7 +616,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "setvalue", "int" ],
-					"patching_rect" : [ 77.930328369140625, 556.931640625, 59.0, 22.0 ],
+					"patching_rect" : [ 590.9302978515625, 548.931640625, 59.0, 22.0 ],
 					"text" : "mc.target"
 				}
 
@@ -629,7 +629,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "multichannelsignal", "", "" ],
-					"patching_rect" : [ 77.930328369140625, 595.931640625, 122.0, 35.0 ],
+					"patching_rect" : [ 590.9302978515625, 587.931640625, 122.0, 35.0 ],
 					"text" : "mc.line~ @chans #1 @bzname #2"
 				}
 
@@ -701,7 +701,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-18",
-					"index" : 2,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -713,7 +713,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-22",
-					"index" : 3,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -725,11 +725,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-26",
-					"index" : 1,
+					"index" : 5,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 77.930328369140625, 685.0, 30.0, 30.0 ]
+					"patching_rect" : [ 590.9302978515625, 677.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -887,7 +887,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-44", 0 ]
 				}
 
@@ -895,8 +895,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 87.430328369140625, 647.5, 53.930328369140625, 647.5, 53.930328369140625, 307.5, 235.430328369140625, 307.5 ],
-					"order" : 0,
+					"midpoints" : [ 600.4302978515625, 647.5, 732.930328369140625, 647.5, 732.930328369140625, 307.5, 235.430328369140625, 307.5 ],
+					"order" : 1,
 					"source" : [ "obj-44", 0 ]
 				}
 
@@ -976,7 +976,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-45", 1 ],
-					"midpoints" : [ 437.430328369140625, 543.0, 127.430328369140625, 543.0 ],
+					"midpoints" : [ 437.430328369140625, 543.0, 640.4302978515625, 543.0 ],
 					"source" : [ "obj-6", 1 ]
 				}
 
@@ -984,7 +984,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-45", 0 ],
-					"midpoints" : [ 259.5, 527.0, 87.430328369140625, 527.0 ],
+					"midpoints" : [ 259.5, 527.0, 600.4302978515625, 527.0 ],
 					"source" : [ "obj-67", 0 ]
 				}
 

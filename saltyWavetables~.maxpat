@@ -186,7 +186,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 343.0, 630.5, 66.0, 29.0 ],
+					"patching_rect" : [ 452.0, 629.5, 66.0, 29.0 ],
 					"text" : "Modulator Signal Out",
 					"textcolor" : [ 0.129411771893501, 0.129411771893501, 0.129411771893501, 1.0 ],
 					"textjustification" : 1
@@ -220,7 +220,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 503.0, 79.0, 107.0, 29.0 ],
+					"patching_rect" : [ 319.0, 299.0, 107.0, 29.0 ],
 					"text" : "Modulated Frequency Ratio",
 					"textcolor" : [ 0.129411771893501, 0.129411771893501, 0.129411771893501, 1.0 ],
 					"textjustification" : 1
@@ -237,7 +237,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 343.0, 79.0, 66.0, 29.0 ],
+					"patching_rect" : [ 452.0, 78.0, 66.0, 29.0 ],
 					"text" : "Modulator Frequency",
 					"textcolor" : [ 0.129411771893501, 0.129411771893501, 0.129411771893501, 1.0 ],
 					"textjustification" : 1
@@ -332,7 +332,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 473.0, 204.0, 78.0, 20.0 ],
+					"patching_rect" : [ 582.0, 203.0, 78.0, 20.0 ],
 					"text" : "< Modulator "
 				}
 
@@ -357,7 +357,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 361.0, 152.0, 139.0, 35.0 ],
+					"patching_rect" : [ 470.0, 151.0, 139.0, 35.0 ],
 					"text" : "mc.phasor~ @chans #1 @bzname #2"
 				}
 
@@ -370,7 +370,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 361.0, 196.5, 108.0, 35.0 ],
+					"patching_rect" : [ 470.0, 195.5, 108.0, 35.0 ],
 					"text" : "mc.wave~ @bzname #2",
 					"textcolor" : [ 0.968627452850342, 0.968627452850342, 0.968627452850342, 1.0 ]
 				}
@@ -432,12 +432,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-58",
-					"index" : 3,
+					"index" : 4,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 361.0, 110.0, 30.0, 30.0 ]
+					"patching_rect" : [ 470.0, 109.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -445,12 +445,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-60",
-					"index" : 4,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "setvalue" ],
-					"patching_rect" : [ 541.5, 110.0, 30.0, 30.0 ]
+					"patching_rect" : [ 357.5, 330.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -474,7 +474,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 361.0, 598.5, 30.0, 30.0 ]
+					"patching_rect" : [ 470.0, 597.5, 30.0, 30.0 ]
 				}
 
 			}
@@ -559,7 +559,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-18", 1 ],
-					"midpoints" : [ 551.0, 363.0, 307.0, 363.0 ],
+					"midpoints" : [ 367.0, 363.0, 307.0, 363.0 ],
 					"source" : [ "obj-60", 0 ]
 				}
 

@@ -7,7 +7,12 @@ function process(block) {
 	// Knob ranges from -5 to 5 octaves
 	var pitch = block.knobs[0] * 10 - 5
 	// Input follows 1V/oct standard
-	pitch += block.inputs[0][0]		
+	pitch += block.inputs[1][0]
+
+	if (block.inputs[0][0] > 0.){
+		pitch = block.inputs[0][0] * block.inputs[1][0]
+	}
+
 
 	// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.
 	// Default frequency is middle C (C4) in Hz.

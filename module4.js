@@ -24,7 +24,7 @@ function process(block) {
 		// Wrap phase around range [0, 1]
 		phase %= 1
 		// Convert phase to sine output
-		block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 3
+		block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5
 		// Convert phase to cosine output
 		block.outputs[1][i] = Math.cos(2 * Math.PI * phase) * 5
 	}

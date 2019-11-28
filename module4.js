@@ -3,18 +3,23 @@ config.bufferSize = 16
 
 var phase = 0
 var phase2 = 0
+
+var unit;
 function process(block) {
+
 	// Knob ranges from -5 to 5 octaves
 	var pitch = block.knobs[0] * 10 - 5
 	// Input follows 1V/oct standard
-	pitch += block.inputs[0][0]		
+	pitch += block.inputs[0][0]	
+
+	//display(unit)
 
 	// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.
 	// Default frequency is middle C (C4) in Hz.
 	// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies
 	var freq = 261.6256 * Math.pow(2, pitch)
 
-	display("Freq: " + freq.toFixed(3) + " Hz")
+	//display("Freq: " + freq.toFixed(3) + " Hz")
 
 	// Set all samples in output buffer
 	var deltaPhase = config.frameDivider * block.sampleTime * freq
@@ -27,6 +32,8 @@ function process(block) {
 		block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5
 		// Convert phase to cosine output
 		block.outputs[1][i] = Math.cos(2 * Math.PI * phase) * 5
+
+		unit = block.outputs[0]
 	}
 
 

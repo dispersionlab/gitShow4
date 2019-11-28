@@ -95,7 +95,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.985000372
+          "value": 0.659501374
         },
         {
           "id": 1,
@@ -161,7 +161,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.0
+          "value": 0.0
         },
         {
           "id": 1,
@@ -444,7 +444,7 @@
         },
         {
           "id": 2,
-          "value": 1.13499916
+          "value": -8.0
         },
         {
           "id": 3,
@@ -594,7 +594,7 @@
         },
         {
           "id": 1,
-          "value": 1.09460199
+          "value": 1.03096318
         },
         {
           "id": 2,
@@ -749,6 +749,7 @@
       "model": "Quantizer",
       "params": [],
       "leftModuleId": 48,
+      "rightModuleId": 50,
       "data": {
         "enabledNotes": [
           false,
@@ -767,6 +768,34 @@
       },
       "pos": [
         53,
+        0
+      ]
+    },
+    {
+      "id": 50,
+      "plugin": "Fundamental",
+      "version": "1.2.1",
+      "model": "Quantizer",
+      "params": [],
+      "leftModuleId": 49,
+      "data": {
+        "enabledNotes": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      "pos": [
+        56,
         0
       ]
     }
@@ -885,28 +914,12 @@
       "color": "#c91847"
     },
     {
-      "id": 379,
-      "outputModuleId": 47,
-      "outputId": 1,
-      "inputModuleId": 1,
-      "inputId": 0,
-      "color": "#0986ad"
-    },
-    {
       "id": 380,
       "outputModuleId": 47,
       "outputId": 2,
       "inputModuleId": 1,
       "inputId": 1,
       "color": "#c9b70e"
-    },
-    {
-      "id": 381,
-      "outputModuleId": 48,
-      "outputId": 0,
-      "inputModuleId": 47,
-      "inputId": 1,
-      "color": "#0c8e15"
     },
     {
       "id": 382,
@@ -987,6 +1000,38 @@
       "inputModuleId": 48,
       "inputId": 0,
       "color": "#0c8e15"
+    },
+    {
+      "id": 399,
+      "outputModuleId": 27,
+      "outputId": 0,
+      "inputModuleId": 47,
+      "inputId": 1,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 400,
+      "outputModuleId": 47,
+      "outputId": 1,
+      "inputModuleId": 1,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 401,
+      "outputModuleId": 50,
+      "outputId": 0,
+      "inputModuleId": 27,
+      "inputId": 0,
+      "color": "#c91847"
+    },
+    {
+      "id": 402,
+      "outputModuleId": 40,
+      "outputId": 2,
+      "inputModuleId": 50,
+      "inputId": 0,
+      "color": "#0986ad"
     }
   ]
 }

@@ -7,6 +7,7 @@
       "version": "1.1.5",
       "model": "AudioInterface",
       "params": [],
+      "leftModuleId": 43,
       "rightModuleId": 8,
       "data": {
         "audio": {
@@ -19,8 +20,8 @@
         }
       },
       "pos": [
-        70,
-        0
+        93,
+        1
       ]
     },
     {
@@ -62,13 +63,14 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 37,
+      "leftModuleId": 38,
+      "rightModuleId": 27,
       "data": {
         "lissajous": 0,
         "external": 0
       },
       "pos": [
-        18,
+        30,
         1
       ]
     },
@@ -81,8 +83,8 @@
       "leftModuleId": 1,
       "text": "Demo patch instructions:\n\n1. Choose an audio driver and device in the AUDIO-8 module.\n\n2. Use the QWERTY and ZXCVB rows of your keyboard to generate MIDI notes, which are converted to 1V/oct and GATE signals.\n\n3. Drag knobs up/down. Hold Ctrl (Cmd on Mac) while dragging to fine-tune. Right-click knobs to edit, or double-click to initialize.\n\n4. Drag ports to create and move cables. Stack multiple cables on outputs by holding Ctrl (Cmd on Mac) and dragging from an output.\n\n5. Right-click on an empty rack space to add new modules.",
       "pos": [
-        80,
-        0
+        103,
+        1
       ]
     },
     {
@@ -140,15 +142,15 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 30,
+      "leftModuleId": 7,
       "rightModuleId": 31,
       "data": {
         "path": "/Users/mp/_gitshows/gitShow4/module4.js",
         "script": "config.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\nvar phase2 = 0\nfunction process(block) {\n\t// Knob ranges from -5 to 5 octaves\n\tvar pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n\tpitch += block.inputs[1][0]\n\n\tif (block.inputs[0][0] > 0.){\n\t\tpitch = block.inputs[0][0] * block.inputs[1][0]\n\t}\n\n\n\t// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.\n\t// Default frequency is middle C (C4) in Hz.\n\t// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies\n\tvar freq = 261.6256 * Math.pow(2, pitch)\n\n\tdisplay(\"Freq: \" + freq.toFixed(3) + \" Hz\")\n\n\t// Set all samples in output buffer\n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n\t\tphase %= 1\n\t\t// Convert phase to sine output\n\t\tblock.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5\n\t\t// Convert phase to cosine output\n\t\tblock.outputs[1][i] = Math.cos(2 * Math.PI * phase) * 5\n\t}\n\n\n\n}"
       },
       "pos": [
-        31,
-        0
+        43,
+        1
       ]
     },
     {
@@ -167,7 +169,7 @@
         },
         {
           "id": 2,
-          "value": 2.99799967
+          "value": 0.352000266
         },
         {
           "id": 3,
@@ -186,14 +188,221 @@
           "value": 0.0
         }
       ],
-      "rightModuleId": 30,
+      "leftModuleId": 41,
+      "rightModuleId": 38,
       "pos": [
-        7,
-        0
+        6,
+        1
       ]
     },
     {
-      "id": 30,
+      "id": 31,
+      "plugin": "Fundamental",
+      "version": "1.2.1",
+      "model": "ADSR",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.241500005
+        },
+        {
+          "id": 1,
+          "value": 0.219499856
+        },
+        {
+          "id": 2,
+          "value": 0.250999868
+        },
+        {
+          "id": 3,
+          "value": 0.0994999856
+        }
+      ],
+      "leftModuleId": 27,
+      "rightModuleId": 34,
+      "pos": [
+        58,
+        1
+      ]
+    },
+    {
+      "id": 32,
+      "plugin": "AudibleInstruments",
+      "version": "1.0.0",
+      "model": "Branches",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.367999882
+        },
+        {
+          "id": 1,
+          "value": 0.5
+        },
+        {
+          "id": 2,
+          "value": 0.0
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 40,
+      "data": {
+        "modes": [
+          false,
+          false
+        ]
+      },
+      "pos": [
+        45,
+        2
+      ]
+    },
+    {
+      "id": 33,
+      "plugin": "Fundamental",
+      "version": "1.2.1",
+      "model": "Delay",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 0.5
+        },
+        {
+          "id": 2,
+          "value": 0.5
+        },
+        {
+          "id": 3,
+          "value": 0.5
+        }
+      ],
+      "pos": [
+        76,
+        2
+      ]
+    },
+    {
+      "id": 34,
+      "plugin": "Fundamental",
+      "version": "1.2.1",
+      "model": "VCA",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 1.0
+        }
+      ],
+      "leftModuleId": 31,
+      "pos": [
+        66,
+        1
+      ]
+    },
+    {
+      "id": 35,
+      "plugin": "Fundamental",
+      "version": "1.2.1",
+      "model": "ADSR",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.418500096
+        },
+        {
+          "id": 1,
+          "value": 0.650858998
+        },
+        {
+          "id": 2,
+          "value": 0.383463293
+        },
+        {
+          "id": 3,
+          "value": 0.205070153
+        }
+      ],
+      "pos": [
+        58,
+        2
+      ]
+    },
+    {
+      "id": 37,
+      "plugin": "Befaco",
+      "version": "1.0.0",
+      "model": "Rampage",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        },
+        {
+          "id": 2,
+          "value": 0.0
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "value": 0.0
+        },
+        {
+          "id": 5,
+          "value": 0.0
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        },
+        {
+          "id": 7,
+          "value": 0.173999488
+        },
+        {
+          "id": 8,
+          "value": 0.0
+        },
+        {
+          "id": 9,
+          "value": 0.0
+        },
+        {
+          "id": 10,
+          "value": 0.0
+        },
+        {
+          "id": 11,
+          "value": 0.0
+        },
+        {
+          "id": 12,
+          "value": 0.5
+        }
+      ],
+      "pos": [
+        12,
+        2
+      ]
+    },
+    {
+      "id": 38,
       "plugin": "AudibleInstruments",
       "version": "1.0.0",
       "model": "Rings",
@@ -248,90 +457,95 @@
         }
       ],
       "leftModuleId": 29,
-      "rightModuleId": 27,
+      "rightModuleId": 7,
       "data": {
         "polyphony": 0,
         "model": 0,
         "easterEgg": false
       },
       "pos": [
-        17,
-        0
+        16,
+        1
       ]
     },
     {
-      "id": 31,
-      "plugin": "Fundamental",
-      "version": "1.2.1",
-      "model": "ADSR",
+      "id": 39,
+      "plugin": "VCV-Recorder",
+      "version": "1.0.1",
+      "model": "Recorder",
       "params": [
         {
           "id": 0,
-          "value": 0.0199999977
+          "value": 1.0
         },
         {
           "id": 1,
-          "value": 0.5
-        },
-        {
-          "id": 2,
-          "value": 0.5
-        },
-        {
-          "id": 3,
-          "value": 0.5
-        }
-      ],
-      "leftModuleId": 27,
-      "rightModuleId": 34,
-      "pos": [
-        46,
-        0
-      ]
-    },
-    {
-      "id": 32,
-      "plugin": "AudibleInstruments",
-      "version": "1.0.0",
-      "model": "Branches",
-      "params": [
-        {
-          "id": 0,
-          "value": 0.367999882
-        },
-        {
-          "id": 1,
-          "value": 0.5
-        },
-        {
-          "id": 2,
-          "value": 0.0
-        },
-        {
-          "id": 3,
           "value": 0.0
         }
       ],
       "data": {
-        "modes": [
-          false,
-          false
-        ]
+        "format": "wav",
+        "path": "/Users/mp/_gitshows/gitShow4/recording4.wav",
+        "incrementPath": true,
+        "sampleRate": 44100,
+        "depth": 16,
+        "bitRate": 320000
       },
       "pos": [
-        33,
-        1
+        94,
+        2
       ]
     },
     {
-      "id": 33,
+      "id": 40,
       "plugin": "Fundamental",
       "version": "1.2.1",
-      "model": "Delay",
+      "model": "LFO",
       "params": [
         {
           "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        },
+        {
+          "id": 2,
+          "value": -2.51000214
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "value": 0.0
+        },
+        {
+          "id": 5,
           "value": 0.5
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        }
+      ],
+      "rightModuleId": 32,
+      "pos": [
+        35,
+        2
+      ]
+    },
+    {
+      "id": 41,
+      "plugin": "AudibleInstruments",
+      "version": "1.0.0",
+      "model": "Shades",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.0964999422
         },
         {
           "id": 1,
@@ -343,68 +557,93 @@
         },
         {
           "id": 3,
-          "value": 0.5
+          "value": 1.0
+        },
+        {
+          "id": 4,
+          "value": 1.0
+        },
+        {
+          "id": 5,
+          "value": 1.0
         }
       ],
+      "rightModuleId": 29,
       "pos": [
-        64,
+        0,
         1
       ]
     },
     {
-      "id": 34,
-      "plugin": "Fundamental",
-      "version": "1.2.1",
-      "model": "VCA",
+      "id": 42,
+      "plugin": "AudibleInstruments",
+      "version": "1.0.0",
+      "model": "Rings",
       "params": [
         {
           "id": 0,
-          "value": 1.0
+          "value": 0.0
         },
         {
           "id": 1,
-          "value": 1.0
+          "value": 0.0
+        },
+        {
+          "id": 2,
+          "value": 30.0
+        },
+        {
+          "id": 3,
+          "value": 0.5
+        },
+        {
+          "id": 4,
+          "value": 0.5
+        },
+        {
+          "id": 5,
+          "value": 0.5
+        },
+        {
+          "id": 6,
+          "value": 0.5
+        },
+        {
+          "id": 7,
+          "value": 0.0
+        },
+        {
+          "id": 8,
+          "value": 0.0
+        },
+        {
+          "id": 9,
+          "value": 0.0
+        },
+        {
+          "id": 10,
+          "value": 0.0
+        },
+        {
+          "id": 11,
+          "value": 0.0
         }
       ],
-      "leftModuleId": 31,
+      "data": {
+        "polyphony": 0,
+        "model": 0,
+        "easterEgg": false
+      },
       "pos": [
-        54,
+        16,
         0
       ]
     },
     {
-      "id": 35,
+      "id": 43,
       "plugin": "Fundamental",
       "version": "1.2.1",
-      "model": "ADSR",
-      "params": [
-        {
-          "id": 0,
-          "value": 0.410023987
-        },
-        {
-          "id": 1,
-          "value": 0.190359026
-        },
-        {
-          "id": 2,
-          "value": 0.704463243
-        },
-        {
-          "id": 3,
-          "value": 0.380570233
-        }
-      ],
-      "pos": [
-        46,
-        1
-      ]
-    },
-    {
-      "id": 37,
-      "plugin": "Befaco",
-      "version": "1.0.0",
-      "model": "Rampage",
+      "model": "Scope",
       "params": [
         {
           "id": 0,
@@ -424,7 +663,7 @@
         },
         {
           "id": 4,
-          "value": 0.0
+          "value": 14.0
         },
         {
           "id": 5,
@@ -436,32 +675,16 @@
         },
         {
           "id": 7,
-          "value": 0.350999385
-        },
-        {
-          "id": 8,
           "value": 0.0
-        },
-        {
-          "id": 9,
-          "value": 0.0
-        },
-        {
-          "id": 10,
-          "value": 0.0
-        },
-        {
-          "id": 11,
-          "value": 0.0
-        },
-        {
-          "id": 12,
-          "value": 0.5
         }
       ],
-      "rightModuleId": 7,
+      "rightModuleId": 1,
+      "data": {
+        "lissajous": 0,
+        "external": 0
+      },
       "pos": [
-        0,
+        80,
         1
       ]
     }
@@ -474,14 +697,6 @@
       "inputModuleId": 7,
       "inputId": 0,
       "color": "#0c8e15"
-    },
-    {
-      "id": 338,
-      "outputModuleId": 30,
-      "outputId": 0,
-      "inputModuleId": 27,
-      "inputId": 0,
-      "color": "#c9b70e"
     },
     {
       "id": 341,
@@ -548,14 +763,6 @@
       "color": "#c91847"
     },
     {
-      "id": 337,
-      "outputModuleId": 37,
-      "outputId": 3,
-      "inputModuleId": 30,
-      "inputId": 5,
-      "color": "#0986ad"
-    },
-    {
       "id": 359,
       "outputModuleId": 29,
       "outputId": 3,
@@ -578,6 +785,78 @@
       "inputModuleId": 34,
       "inputId": 3,
       "color": "#0c8e15"
+    },
+    {
+      "id": 360,
+      "outputModuleId": 34,
+      "outputId": 0,
+      "inputModuleId": 39,
+      "inputId": 2,
+      "color": "#0986ad"
+    },
+    {
+      "id": 361,
+      "outputModuleId": 33,
+      "outputId": 0,
+      "inputModuleId": 39,
+      "inputId": 3,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 362,
+      "outputModuleId": 40,
+      "outputId": 2,
+      "inputModuleId": 32,
+      "inputId": 2,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 363,
+      "outputModuleId": 40,
+      "outputId": 1,
+      "inputModuleId": 41,
+      "inputId": 0,
+      "color": "#c91847"
+    },
+    {
+      "id": 337,
+      "outputModuleId": 37,
+      "outputId": 3,
+      "inputModuleId": 42,
+      "inputId": 5,
+      "color": "#0986ad"
+    },
+    {
+      "id": 338,
+      "outputModuleId": 42,
+      "outputId": 0,
+      "inputModuleId": 27,
+      "inputId": 0,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 365,
+      "outputModuleId": 41,
+      "outputId": 0,
+      "inputModuleId": 42,
+      "inputId": 6,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 366,
+      "outputModuleId": 34,
+      "outputId": 0,
+      "inputModuleId": 43,
+      "inputId": 0,
+      "color": "#0986ad"
+    },
+    {
+      "id": 367,
+      "outputModuleId": 34,
+      "outputId": 1,
+      "inputModuleId": 43,
+      "inputId": 1,
+      "color": "#c9b70e"
     }
   ]
 }

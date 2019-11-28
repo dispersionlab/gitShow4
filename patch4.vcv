@@ -19,7 +19,7 @@
         }
       },
       "pos": [
-        63,
+        70,
         0
       ]
     },
@@ -62,12 +62,13 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 37,
       "data": {
         "lissajous": 0,
         "external": 0
       },
       "pos": [
-        11,
+        18,
         1
       ]
     },
@@ -80,7 +81,7 @@
       "leftModuleId": 1,
       "text": "Demo patch instructions:\n\n1. Choose an audio driver and device in the AUDIO-8 module.\n\n2. Use the QWERTY and ZXCVB rows of your keyboard to generate MIDI notes, which are converted to 1V/oct and GATE signals.\n\n3. Drag knobs up/down. Hold Ctrl (Cmd on Mac) while dragging to fine-tune. Right-click knobs to edit, or double-click to initialize.\n\n4. Drag ports to create and move cables. Stack multiple cables on outputs by holding Ctrl (Cmd on Mac) and dragging from an output.\n\n5. Right-click on an empty rack space to add new modules.",
       "pos": [
-        73,
+        80,
         0
       ]
     },
@@ -146,7 +147,7 @@
         "script": "config.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\nvar phase2 = 0\nfunction process(block) {\n\t// Knob ranges from -5 to 5 octaves\n\tvar pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n\tpitch += block.inputs[1][0]\n\n\tif (block.inputs[0][0] > 0.){\n\t\tpitch = block.inputs[0][0] * block.inputs[1][0]\n\t}\n\n\n\t// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.\n\t// Default frequency is middle C (C4) in Hz.\n\t// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies\n\tvar freq = 261.6256 * Math.pow(2, pitch)\n\n\tdisplay(\"Freq: \" + freq.toFixed(3) + \" Hz\")\n\n\t// Set all samples in output buffer\n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n\t\tphase %= 1\n\t\t// Convert phase to sine output\n\t\tblock.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5\n\t\t// Convert phase to cosine output\n\t\tblock.outputs[1][i] = Math.cos(2 * Math.PI * phase) * 5\n\t}\n\n\n\n}"
       },
       "pos": [
-        24,
+        31,
         0
       ]
     },
@@ -187,7 +188,7 @@
       ],
       "rightModuleId": 30,
       "pos": [
-        0,
+        7,
         0
       ]
     },
@@ -254,7 +255,7 @@
         "easterEgg": false
       },
       "pos": [
-        10,
+        17,
         0
       ]
     },
@@ -284,7 +285,7 @@
       "leftModuleId": 27,
       "rightModuleId": 34,
       "pos": [
-        39,
+        46,
         0
       ]
     },
@@ -318,7 +319,7 @@
         ]
       },
       "pos": [
-        26,
+        33,
         1
       ]
     },
@@ -346,7 +347,7 @@
         }
       ],
       "pos": [
-        57,
+        64,
         1
       ]
     },
@@ -367,7 +368,7 @@
       ],
       "leftModuleId": 31,
       "pos": [
-        47,
+        54,
         0
       ]
     },
@@ -394,30 +395,73 @@
           "value": 0.380570233
         }
       ],
-      "rightModuleId": 36,
       "pos": [
-        39,
+        46,
         1
       ]
     },
     {
-      "id": 36,
-      "plugin": "Fundamental",
-      "version": "1.2.1",
-      "model": "VCA",
+      "id": 37,
+      "plugin": "Befaco",
+      "version": "1.0.0",
+      "model": "Rampage",
       "params": [
         {
           "id": 0,
-          "value": 1.0
+          "value": 0.0
         },
         {
           "id": 1,
-          "value": 1.0
+          "value": 0.0
+        },
+        {
+          "id": 2,
+          "value": 0.0
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "value": 0.0
+        },
+        {
+          "id": 5,
+          "value": 0.0
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        },
+        {
+          "id": 7,
+          "value": 0.350999385
+        },
+        {
+          "id": 8,
+          "value": 0.0
+        },
+        {
+          "id": 9,
+          "value": 0.0
+        },
+        {
+          "id": 10,
+          "value": 0.0
+        },
+        {
+          "id": 11,
+          "value": 0.0
+        },
+        {
+          "id": 12,
+          "value": 0.5
         }
       ],
-      "leftModuleId": 35,
+      "rightModuleId": 7,
       "pos": [
-        47,
+        0,
         1
       ]
     }
@@ -432,28 +476,12 @@
       "color": "#0c8e15"
     },
     {
-      "id": 337,
-      "outputModuleId": 29,
-      "outputId": 3,
-      "inputModuleId": 30,
-      "inputId": 5,
-      "color": "#0986ad"
-    },
-    {
       "id": 338,
       "outputModuleId": 30,
       "outputId": 0,
       "inputModuleId": 27,
       "inputId": 0,
       "color": "#c9b70e"
-    },
-    {
-      "id": 340,
-      "outputModuleId": 29,
-      "outputId": 3,
-      "inputModuleId": 32,
-      "inputId": 0,
-      "color": "#c91847"
     },
     {
       "id": 341,
@@ -504,36 +532,52 @@
       "color": "#c9b70e"
     },
     {
-      "id": 354,
-      "outputModuleId": 35,
-      "outputId": 0,
-      "inputModuleId": 36,
-      "inputId": 3,
-      "color": "#0c8e15"
-    },
-    {
-      "id": 355,
-      "outputModuleId": 27,
-      "outputId": 0,
-      "inputModuleId": 36,
-      "inputId": 5,
-      "color": "#c91847"
-    },
-    {
-      "id": 356,
-      "outputModuleId": 36,
-      "outputId": 1,
-      "inputModuleId": 33,
-      "inputId": 4,
-      "color": "#0986ad"
-    },
-    {
       "id": 357,
       "outputModuleId": 33,
       "outputId": 0,
       "inputModuleId": 1,
       "inputId": 1,
       "color": "#c9b70e"
+    },
+    {
+      "id": 340,
+      "outputModuleId": 37,
+      "outputId": 1,
+      "inputModuleId": 32,
+      "inputId": 0,
+      "color": "#c91847"
+    },
+    {
+      "id": 337,
+      "outputModuleId": 37,
+      "outputId": 3,
+      "inputModuleId": 30,
+      "inputId": 5,
+      "color": "#0986ad"
+    },
+    {
+      "id": 359,
+      "outputModuleId": 29,
+      "outputId": 3,
+      "inputModuleId": 37,
+      "inputId": 3,
+      "color": "#c91847"
+    },
+    {
+      "id": 356,
+      "outputModuleId": 34,
+      "outputId": 1,
+      "inputModuleId": 33,
+      "inputId": 4,
+      "color": "#0986ad"
+    },
+    {
+      "id": 354,
+      "outputModuleId": 35,
+      "outputId": 0,
+      "inputModuleId": 34,
+      "inputId": 3,
+      "color": "#0c8e15"
     }
   ]
 }
